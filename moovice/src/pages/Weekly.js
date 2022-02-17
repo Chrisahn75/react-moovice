@@ -4,7 +4,6 @@ import Card from "../components/Card"
 class Popular extends React.Component {
     constructor() {
       super();
-  
       this.state = {
         movies: []
       };
@@ -21,7 +20,7 @@ class Popular extends React.Component {
     render() {
       return (
         <>
-          <h1 className="text-center">Popular</h1>
+          <h1 className="text-center">Weekly</h1>
           <div className="d-flex flex-wrap justify-content-center">
             {this.state.movies.map((movie) => (
               <Card key={movie.id} movieSelected={movie}/>

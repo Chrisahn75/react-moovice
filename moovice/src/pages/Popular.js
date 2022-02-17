@@ -1,6 +1,5 @@
 import React from "react";
 import Card from "../components/Card"
-import { Link } from "react-router-dom";
 
 class Popular extends React.Component {
     constructor() {
@@ -12,10 +11,9 @@ class Popular extends React.Component {
     }
   
     componentDidMount() {
-      fetch("https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=5db36b700acda7185166a4e97a159b98")
+      fetch("https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=a8988153af227c504cd05b5bc12bdce9")
         .then((res) => res.json())
         .then((res) => {
-          console.log(res);
           this.setState({movies: res.results});
         });
     }
